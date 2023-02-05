@@ -15,7 +15,7 @@ export default function Home({ pokemon }) {
       <main className={styles.main}>
         <div className={styles.BgImageDiv}>
           <img className={styles.BgImage} src="/Assets/Background.png" alt="background-image" />
-          <img className={styles.logo} src="/Assets/logo.png" alt="logo" />
+          <img className={styles.logo} src="/Assets/Logo.png" alt="logo" />
         </div>
         <div className={styles.cardContainer}>
           <div className={styles.grid}>
@@ -57,14 +57,14 @@ export default function Home({ pokemon }) {
             <div className={styles.grid__column}>
               <div className={styles.left__column}>
                 <div className={styles.left_sub_row_one}>
-                  <img className={styles.left_image__one} src="/Assets/image03.png" alt="img" />
+                  <img className={styles.left_image__one} src="/Assets/Image03.png" alt="img" />
                   <p className={styles.image_one_description}>
                     Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with red cheeks, black-tipped ears, and a lightning bolt-shaped tail. It evolves from Pichu
                     and is the final form of Raichu. Pikachu is known for its cute and cheerful known for. final form of Raichu. Pikachu is known for its cute and cheerful known for.
                   </p>
                 </div>
                 <div className={styles.left_sub_row_one}>
-                  <img className={styles.left_image_two} src="/Assets/image02.png" alt="img" />
+                  <img className={styles.left_image_two} src="/Assets/Image02.png" alt="img" />
                   <p className={styles.image_one_description}>
                     Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with red cheeks, black-tipped ears, and a lightning bolt-shaped tail. It evolves from Pichu
                     and is the final form of Raichu. Pikachu is known for its cute and cheerful known for. and is the final form of Raichu. Pikachu is known for its cute and cheerful known for.
@@ -87,14 +87,14 @@ export default function Home({ pokemon }) {
                   </p>
                 </div>
                 <div className={styles.right_sub_row_two}>
-                  <img className={styles.right_image__one} src="/Assets/image05.png" alt="img" />
+                  <img className={styles.right_image__one} src="/Assets/Image05.png" alt="img" />
                   <p className={styles.image_one_description}>
                     Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with red cheeks, black-tipped ears, and a lightning bolt-shaped tail. It evolves from Pichu
                     and is the final form of Raichu. Pikachu is known for its cute and cheerful known for. Pikachu is known for its cute and cheerful known for.
                   </p>
                 </div>
                 <div className={styles.right_sub_row_three}>
-                  <img className={styles.right_image_two} src="/Assets/image01.png" alt="img" />
+                  <img className={styles.right_image_two} src="/Assets/Image01.png" alt="img" />
                   <p className={styles.image_one_description}>
                     Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with red cheeks, black-tipped ears, and a lightning bolt-shaped tail. It evolves from Pichu
                     and is the final form of Raichu. Pikachu is known for its cute and cheerful known for. Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with
