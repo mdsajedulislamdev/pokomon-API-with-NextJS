@@ -16,7 +16,7 @@
   margin: auto;
   padding: 1vw;
   border-radius: 5px;
-  border: 1px solid #2d3630;
+  border: 1px solid #2d3630af;
 }
 .image_container {
   display: flex;
@@ -205,7 +205,26 @@
   font-weight: 500;
   font-family: "Ubuntu", sans-serif;
 }
-/* =========media 600px====================== */
+.back_button {
+  text-align: center;
+}
+.back_button > button {
+  font-size: 2vw;
+  border: none;
+  outline: none;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  border-radius: 5px;
+  color: #2d3630;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #fc7c23;
+  font-family: "Ubuntu", sans-serif;
+}
+.back_button > button:hover {
+  background-color: #eb6c1d;
+}
+
+/* =========media max600px====================== */
 @media only screen and (max-width: 600px) {
   .main {
     position: relative;
@@ -222,13 +241,197 @@
     gap: 4vw;
     margin: auto;
     margin-top: 70vw;
-    border: 1px solid black;
+    border: none;
   }
   .image_container > img {
     width: 80vw;
     position: absolute;
     left: 10%;
-    top: 32vw;
+    top: 22vw;
     display: block;
+  }
+  .left_side_style,
+  .right_side_style {
+    display: none;
+  }
+}
+
+/* =========media max600px ================== */
+@media only screen and (max-width: 600px) {
+  .pokemon_name {
+    text-align: center;
+    font-size: 9vw;
+    color: #3383c8;
+    padding-bottom: 1vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* ===========pokemon_description============== */
+  .pokemon_description {
+    text-align: justify;
+    word-break: break-all;
+    font-size: 4.3vw;
+    font-weight: 500;
+    color: #2d3630;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* ============Height area ================ */
+  .weight_height_div {
+    height: 65vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vw;
+    border-radius: 5px 5px 40px 5px;
+    border: 1vw solid #a02727d2;
+  }
+  .height_container {
+    height: 50vh;
+    padding-top: 8vw;
+  }
+  .height_container > div {
+    padding-bottom: 20vw;
+  }
+  .height {
+    text-align: left;
+    font-size: 6vw;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .height ~ p {
+    text-align: left;
+    font-size: 5vw;
+    color: #2d3630;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* =============Weight area================== */
+  .weight {
+    text-align: left;
+    font-size: 6vw;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .weight ~ p {
+    text-align: left;
+    font-size: 5vw;
+    color: #2d3630;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* =============category area =================== */
+  .category_container {
+    height: 50vh;
+    padding-top: 8vw;
+  }
+  .category_container > div {
+    padding-bottom: 20vw;
+  }
+  .category {
+    text-align: left;
+    font-size: 6vw;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .category ~ p {
+    text-align: left;
+    font-size: 5vw;
+    color: #2d3630;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* ============Ability area ================= */
+  .ability {
+    text-align: left;
+    font-size: 6vw;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .ability ~ p {
+    text-align: left;
+    font-size: 5vw;
+    color: #2d3630;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* ============Types Area================== */
+  .types_container > h2 {
+    text-align: left;
+    font-size: 8vw;
+    color: #2d3630;
+    padding-bottom: 1.5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .types_container > button {
+    font-size: 5vw;
+    border: none;
+    outline: none;
+    padding: 2vw;
+    border-radius: 3px;
+    color: #ffff;
+    cursor: pointer;
+    margin-right: 1vw;
+    background-color: #fc7c23;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  /* ============weakness area ================ */
+  .weakness_container > h2 {
+    text-align: left;
+    font-size: 8vw;
+    color: #2d3630;
+    padding-top: 5vw;
+    padding-bottom: 1vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .weakness_container > button {
+    font-size: 4vw;
+    border: none;
+    outline: none;
+    padding: 2vw;
+    border-radius: 3px;
+    color: #ffff;
+    margin-right: 1vw;
+    cursor: pointer;
+    background-color: #4592c4;
+    font-family: "Ubuntu", sans-serif;
+  }
+  /* =============stats area ================ */
+  .stats_container > h2 {
+    text-align: left;
+    font-size: 8vw;
+    color: #2d3630;
+    padding-top: 5vw;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .stats_container > p {
+    text-align: left;
+    font-size: 4.5vw;
+    color: #2d3630;
+    padding-top: 0.5vw;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .back_button {
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .back_button > button {
+    font-size: 6vw;
+    border: none;
+    outline: none;
+    padding: 1vw 1.5vw 1vw 1.5vw;
+    border-radius: 5px;
+    color: #2d3630;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #fc7c23;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .back_button > button:hover {
+    background-color: #eb6c1d;
   }
 }

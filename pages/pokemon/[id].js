@@ -1,17 +1,21 @@
 import styles from "../../styles/pokeDetails.module.css";
 import { gql } from "@apollo/client";
 import { client } from "../_app.js";
+import Link from "next/link";
 
 export default function pokeDetails({ data, count }) {
   const pokemon = data.data.pokemon;
   const types = pokemon.types;
-  console.log(pokemon);
-  console.log(types);
+  console.log(pokemon.sprites.front_default);
+  console.log(pokemon.sprites.front_default);
+
   return (
     <div className={styles.main}>
-      <div className={styles.logo}>
-        <img src="/Assets/Logo.png"></img>
-      </div>
+      <Link href="/">
+        <div className={styles.logo}>
+          <img src="/Assets/Logo.png"></img>
+        </div>
+      </Link>
       <div className={styles.poke_info_container}>
         <div className={styles.description_container}>
           <h1 className={styles.pokemon_name}>
@@ -24,7 +28,7 @@ export default function pokeDetails({ data, count }) {
             <div className={styles.height_container}>
               <div>
                 <h2 className={styles.height}>Height</h2>
-                <p>{}</p>
+                <p>2.36</p>
               </div>
               <div>
                 <h2 className={styles.weight}>Weight</h2>
@@ -44,7 +48,7 @@ export default function pokeDetails({ data, count }) {
           </div>
         </div>
         <div className={styles.image_container}>
-          <img src="/Assets/poke.png"></img>
+          <img src={pokemon.sprites.front_default}></img>
         </div>
         <div>
           <div>
@@ -72,6 +76,11 @@ export default function pokeDetails({ data, count }) {
           </div>
         </div>
       </div>
+      <Link href="/">
+        <div className={styles.back_button}>
+          <button>Back to Home</button>
+        </div>
+      </Link>
       <>
         <img className={styles.left_side_style} src="/Assets/Left.png" alt="left" />
         <img className={styles.right_side_style} src="/Assets/Left.png" alt="right" />
