@@ -6,8 +6,6 @@ import Link from "next/link";
 export default function pokeDetails({ data, count }) {
   const pokemon = data.data.pokemon;
   const types = pokemon.types;
-  console.log(pokemon.sprites.front_default);
-  console.log(pokemon.sprites.front_default);
 
   return (
     <div className={styles.main}>
@@ -59,10 +57,10 @@ export default function pokeDetails({ data, count }) {
             </div>
             <div className={styles.weakness_container}>
               <h2>Weakness</h2>
-              <button>Button1</button>
-              <button>Button2</button>
-              <button>Button3</button>
-              <button>Button4</button>
+              <button>poison</button>
+              <button>bug</button>
+              <button>grass</button>
+              <button>kit</button>
             </div>
             <div className={styles.stats_container}>
               <h2>Stats</h2>

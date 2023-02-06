@@ -9,6 +9,7 @@
   position: relative;
 }
 .BgImageDiv .logo {
+  display: block;
   width: 20vw;
   position: absolute;
   top: 8%;
@@ -66,31 +67,33 @@
   font-family: "Ubuntu", sans-serif;
 }
 .buttonDiv {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .pokemonName {
   font-size: 17px;
   font-weight: bold;
   color: #2d3630;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   font-family: "Ubuntu", sans-serif;
   transition: 0.3s ease-in-out;
 }
 .card:hover .pokemonName {
   color: #f2f2f2;
 }
-.buttons a {
+.buttons > button {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
+  border: none;
+  outline: none;
   border-radius: 3px;
   padding: 5px 12px 5px 12px;
   box-shadow: 0.6px 0.6px 2px #2d3630ad;
   background-color: #b97fc9;
   font-family: "Ubuntu", sans-serif;
 }
-.buttons a:nth-child(1) {
+.buttons > button:nth-child(1) {
   margin-right: 10px;
   background-color: #9bcc50;
 }
@@ -177,7 +180,7 @@
   .card:hover .pokemonName {
     color: #f2f2f2;
   }
-  .buttons a {
+  .buttons > button {
     text-decoration: none;
     font-size: 3vw;
     font-weight: bold;
@@ -186,11 +189,9 @@
     padding: 5px 12px 5px 12px;
     box-shadow: 0.6px 0.6px 2px #2d3630ad;
     background-color: #b97fc9;
-    /* background-color: #4592c4;
-    background-color: #fc7c23; */
     font-family: "Ubuntu", sans-serif;
   }
-  .buttons a:nth-child(1) {
+  .buttons > button:nth-child(1) {
     margin-right: 10px;
     background-color: #9bcc50;
   }

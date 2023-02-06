@@ -6,7 +6,7 @@ import { client } from "./_app.js";
 
 export default function Home({ data }) {
   const pokemons = data.pokemons.results;
-  console.log(pokemons);
+
   return (
     <>
       <Head>
@@ -41,8 +41,8 @@ export default function Home({ data }) {
                   <div className={styles.buttonDiv}>
                     <p className={styles.pokemonName}>{poke.name}</p>
                     <div className={styles.buttons}>
-                      <a href="/">Grass</a>
-                      <a href="/">Poison</a>
+                      <button>grass</button>
+                      <button>poison</button>
                     </div>
                   </div>
                 </div>

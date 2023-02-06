@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 export const client = new ApolloClient({
@@ -15,6 +16,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-// export default function App({ Component, pageProps }) {
-//   return <Component {...pageProps} />;
-// }
