@@ -88,8 +88,6 @@
   padding: 5px 12px 5px 12px;
   box-shadow: 0.6px 0.6px 2px #2d3630ad;
   background-color: #b97fc9;
-  /* background-color: #4592c4;
-  background-color: #fc7c23; */
   font-family: "Ubuntu", sans-serif;
 }
 .buttons a:nth-child(1) {
@@ -127,7 +125,6 @@
     gap: 0.8rem;
   }
   .grid .card {
-    /* display: none; */
     width: 45vw;
     height: 65vw;
     padding: 0.7rem;
@@ -268,7 +265,7 @@
   height: 900px;
 }
 
-/* ==========================grid__section==================== */
+/* ==========================grid section==================== */
 .grid__section {
   width: 1050px;
   position: absolute;
@@ -401,7 +398,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   /* ============left section============= */
   .left_sub_row_one {

@@ -1,0 +1,234 @@
+.main {
+  width: 100vw;
+}
+.logo {
+  text-align: center;
+  padding-top: 2vw;
+}
+.logo > img {
+  width: 15vw;
+}
+.poke_info_container {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 25vw 1fr;
+  gap: 2vw;
+  margin: auto;
+  padding: 1vw;
+  border-radius: 5px;
+  border: 1px solid #2d3630;
+}
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image_container > img {
+  width: 23vw;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+.image_container > img:hover {
+  transform: scale(1.2);
+}
+.left_side_style {
+  position: absolute;
+  display: block;
+  width: 9vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.right_side_style {
+  position: absolute;
+  display: block;
+  width: 9vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+/* ===========pokemon_name============== */
+.pokemon_name {
+  text-align: center;
+  font-size: 2.5vw;
+  color: #3383c8;
+  padding-bottom: 0.2vw;
+  font-family: "Ubuntu", sans-serif;
+}
+/* ===========pokemon_description============== */
+.pokemon_description {
+  text-align: justify;
+  word-break: break-all;
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: #2d3630;
+  font-family: "Ubuntu", sans-serif;
+}
+/* ============Height area ================ */
+.weight_height_div {
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1vw;
+  border-radius: 5px 5px 40px 5px;
+  border: 2px solid black;
+}
+.height_container {
+  height: 40vh;
+  padding-top: 1.5vw;
+}
+.height_container > div {
+  padding-bottom: 5vw;
+}
+.height {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-bottom: 0.8vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.height ~ p {
+  text-align: left;
+  font-size: 1.2vw;
+  color: #2d3630;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+/* =============Weight area================== */
+.weight {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-bottom: 0.8vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.weight ~ p {
+  text-align: left;
+  font-size: 1.2vw;
+  color: #2d3630;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+/* =============category area =================== */
+.category_container {
+  height: 40vh;
+  padding-top: 1.5vw;
+}
+.category_container > div {
+  padding-bottom: 5vw;
+}
+.category {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-bottom: 0.8vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.category ~ p {
+  text-align: left;
+  font-size: 1.2vw;
+  color: #2d3630;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+/* ============Ability area ================= */
+.ability {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-bottom: 0.8vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.ability ~ p {
+  text-align: left;
+  font-size: 1.2vw;
+  color: #2d3630;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+/* ============Types Area================== */
+.types_container > h2 {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-bottom: 1vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.types_container > button {
+  font-size: 1.1vw;
+  border: none;
+  outline: none;
+  padding: 0.5vw;
+  border-radius: 3px;
+  color: #ffff;
+  cursor: pointer;
+  margin-right: 0.5vw;
+  background-color: #fc7c23;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ============weakness area ================ */
+.weakness_container > h2 {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-top: 1.5vw;
+  padding-bottom: 0.5vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.weakness_container > button {
+  font-size: 1.1vw;
+  border: none;
+  outline: none;
+  padding: 0.5vw;
+  border-radius: 3px;
+  color: #ffff;
+  margin-right: 0.5vw;
+  cursor: pointer;
+  background-color: #4592c4;
+  font-family: "Ubuntu", sans-serif;
+}
+/* =============stats area ================ */
+.stats_container > h2 {
+  text-align: left;
+  font-size: 2vw;
+  color: #2d3630;
+  padding-top: 1.5vw;
+  font-family: "Ubuntu", sans-serif;
+}
+.stats_container > p {
+  text-align: left;
+  font-size: 1.2vw;
+  color: #2d3630;
+  padding-top: 0.5vw;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+/* =========media 600px====================== */
+@media only screen and (max-width: 600px) {
+  .main {
+    position: relative;
+  }
+  .logo > img {
+    width: 60vw;
+    text-align: center;
+    padding-top: 2vw;
+  }
+  .poke_info_container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vw;
+    margin: auto;
+    margin-top: 70vw;
+    border: 1px solid black;
+  }
+  .image_container > img {
+    width: 80vw;
+    position: absolute;
+    left: 10%;
+    top: 32vw;
+    display: block;
+  }
+}

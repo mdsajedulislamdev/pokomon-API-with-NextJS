@@ -3,7 +3,6 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 export default function Home({ pokemon }) {
-  console.log(pokemon);
   return (
     <>
       <Head>
@@ -40,7 +39,7 @@ export default function Home({ pokemon }) {
             ))}
           </div>
         </div>
-        {/* Second Part================= */}
+        {/* =============Second Part================= */}
         <div className={styles.secondMain}>
           <div className={styles.titleDiv}>
             <img className={styles.brush} src="/Assets/Brush.png" alt="brush" />
