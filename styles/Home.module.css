@@ -96,6 +96,10 @@
   margin-right: 10px;
   background-color: #9bcc50;
 }
+.top_content,
+.bottom_content {
+  display: none;
+}
 /* =============Card media query===================== */
 @media only screen and (max-width: 600px) {
   .BgImage {
@@ -193,6 +197,32 @@
     margin-right: 10px;
     background-color: #9bcc50;
   }
+  .top_content {
+    display: block;
+    position: absolute;
+    top: 50vw;
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: 500;
+    word-break: break-all;
+    text-align: justify;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .bottom_content {
+    display: block;
+    position: absolute;
+    top: 157vw;
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: 500;
+    word-break: break-all;
+    text-align: justify;
+    font-family: "Ubuntu", sans-serif;
+  }
 }
 /* ==================Second Part================== */
 .secondMain {
@@ -201,7 +231,7 @@
   position: relative;
 }
 .titleDiv {
-  width: 90vw;
+  width: 100vw;
   position: absolute;
   top: 12vw;
   left: 50%;
@@ -230,13 +260,14 @@
 .left__right__images__div {
   display: flex;
   justify-content: space-between;
-  margin-top: -0.21875rem; /* margin-top: -3.5px; */
+  margin-top: -0.21875rem;
 }
 .leftImage,
 .rightImage {
   width: 8rem;
   height: 900px;
 }
+
 /* ==========================grid__section==================== */
 .grid__section {
   width: 1050px;
@@ -320,14 +351,14 @@
     position: relative;
   }
   .titleDiv {
-    width: 100vw;
+    width: 150vw;
     position: absolute;
     top: 25vw;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .brush {
-    width: 55vw;
+    width: 75vw;
     position: absolute;
     top: 0;
     left: 50%;
@@ -339,7 +370,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #257bc4;
-    font-size: 4.5vw;
+    font-size: 6vw;
     font-family: "Ubuntu", sans-serif;
   }
   .titles span {
@@ -349,19 +380,19 @@
   .left__right__images__div {
     display: flex;
     justify-content: space-between;
-    margin-top: -0.21875rem; /* margin-top: -3.5px; */
+    margin-top: -0.21875rem;
   }
   .leftImage,
   .rightImage {
     width: 10vw;
-    height: 130vw;
+    height: 168vw;
   }
 }
 /* ==========Grid section=================== */
 @media only screen and (max-width: 600px) {
   .grid__section {
     width: 50vw;
-    top: 90vw;
+    top: 106vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
