@@ -1,6 +1,12 @@
 import styles from "../../styles/pokeDetails.module.css";
+import { gql } from "@apollo/client";
+import { client } from "../_app.js";
 
-export default function pokeDetails() {
+export default function pokeDetails({ data, count }) {
+  const pokemon = data.data.pokemon;
+  const types = pokemon.types;
+  console.log(pokemon);
+  console.log(types);
   return (
     <div className={styles.main}>
       <div className={styles.logo}>
@@ -8,7 +14,9 @@ export default function pokeDetails() {
       </div>
       <div className={styles.poke_info_container}>
         <div className={styles.description_container}>
-          <h1 className={styles.pokemon_name}>Pokemon #001</h1>
+          <h1 className={styles.pokemon_name}>
+            {pokemon.name} #0{count}
+          </h1>
           <p className={styles.pokemon_description}>
             Pikachu is a popular Electric-type Pokémon that has the appearance of a yellow rodent with red cheeks, black-tipped ears, and a lightning bolt-shaped tail. It evolves.
           </p>
@@ -16,7 +24,7 @@ export default function pokeDetails() {
             <div className={styles.height_container}>
               <div>
                 <h2 className={styles.height}>Height</h2>
-                <p>2.015</p>
+                <p>{}</p>
               </div>
               <div>
                 <h2 className={styles.weight}>Weight</h2>
@@ -42,8 +50,8 @@ export default function pokeDetails() {
           <div>
             <div className={styles.types_container}>
               <h2>Types</h2>
-              <button>Button1</button>
-              <button>Button2</button>
+              <button>{types[0]?.type.name ? types[0]?.type.name : "none"}</button>
+              <button>{types[1]?.type.name ? types[1]?.type.name : "none"}</button>
             </div>
             <div className={styles.weakness_container}>
               <h2>Weakness</h2>
@@ -71,14 +79,39 @@ export default function pokeDetails() {
     </div>
   );
 }
+export async function getServerSideProps(ctx) {
+  const count = ctx.query.count;
+  const variable = { name: ctx.query.id };
 
-// export async function getServerSideProps(ctx) {
-//   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${ctx.query.name}`);
-//   const poke = await res.json();
+  const poke = await client.query({
+    query: gql`
+      query pokemon($name: String!) {
+        pokemon(name: $name) {
+          id
+          name
+          sprites {
+            front_default
+          }
+          moves {
+            move {
+              name
+            }
+          }
+          types {
+            type {
+              name
+            }
+          }
+        }
+      }
+    `,
+    variables: variable,
+  });
 
-//   return {
-//     props: {
-//       data: poke,
-//     },
-//   };
-// }
+  return {
+    props: {
+      data: poke,
+      count,
+    },
+  };
+}

@@ -1,8 +1,12 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+import { gql } from "@apollo/client";
+import { client } from "./_app.js";
 
-export default function Home({ pokemon }) {
+export default function Home({ data }) {
+  const pokemons = data.pokemons.results;
+  console.log(pokemons);
   return (
     <>
       <Head>
@@ -18,13 +22,20 @@ export default function Home({ pokemon }) {
         </div>
         <div className={styles.cardContainer}>
           <div className={styles.grid}>
-            {pokemon.results.slice(0, 10).map((poke, index) => (
-              <Link href={`/pokemon/${pokemon.name}`} key={index} legacyBehavior>
+            {pokemons.slice(0, 10).map((poke, index) => (
+              <Link
+                href={{
+                  pathname: `/pokemon/${poke.name}`,
+                  query: { count: index + 1 },
+                }}
+                key={index}
+                legacyBehavior
+              >
                 <div className={styles.card}>
                   <div className={styles.innerImageDiv}>
                     <a>
                       <p className={styles.counterNumber}>#{("000" + (index + 1)).slice(-3)}</p>
-                      <img className={styles.cardImage} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} alt="" />
+                      <img className={styles.cardImage} src={poke.image} alt="image" />
                     </a>
                   </div>
                   <div className={styles.buttonDiv}>
@@ -118,12 +129,30 @@ export default function Home({ pokemon }) {
   );
 }
 export async function getServerSideProps() {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon");
-  const pokemon = await res.json();
+  const { data } = await client.query({
+    query: gql`
+      query pokemons {
+        pokemons {
+          count
+          next
+          previous
+          nextOffset
+          prevOffset
+          status
+          message
+          results {
+            url
+            name
+            image
+          }
+        }
+      }
+    `,
+  });
 
   return {
     props: {
-      pokemon,
+      data,
     },
   };
 }
