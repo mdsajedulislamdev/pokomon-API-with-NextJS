@@ -105,7 +105,7 @@
 @media only screen and (max-width: 600px) {
   .BgImage {
     width: 100vw;
-    height: 370vw;
+    height: 375vw;
     border-radius: 0 0 10px 10px;
   }
   .BgImageDiv .logo {
@@ -198,7 +198,7 @@
   .top_content {
     display: block;
     position: absolute;
-    top: 50vw;
+    top: 47vw;
     width: 80vw;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -263,14 +263,14 @@
 .leftImage,
 .rightImage {
   width: 8rem;
-  height: 900px;
+  height: 850px;
 }
 
 /* ==========================grid section==================== */
 .grid__section {
   width: 1050px;
   position: absolute;
-  top: 590px;
+  top: 550px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -440,5 +440,149 @@
     float: left;
     padding-right: 1rem;
     padding-bottom: 1rem;
+  }
+}
+/* ===========media max768px================== */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .BgImage {
+    width: 100vw;
+    height: 185vw;
+    border-radius: 0 0 10px 10px;
+  }
+  .BgImageDiv .logo {
+    display: block;
+    width: 25vw;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cardContainer {
+    position: absolute;
+    top: 130px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  .titleDiv {
+    width: 150vw;
+    position: absolute;
+    top: 15vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .brush {
+    width: 65vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .titles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #257bc4;
+    font-size: 2.5rem;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .titles span {
+    position: relative;
+    left: 50px;
+  }
+  .left__right__images__div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -0.21875rem;
+  }
+  .leftImage,
+  .rightImage {
+    width: 6rem;
+    height: 700px;
+  }
+  .grid__section {
+    width: 75vw;
+    position: absolute;
+    top: 460px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+/* =============media max1024px=============== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .BgImage {
+    width: 100vw;
+    height: 107vw;
+    border-radius: 0 0 10px 10px;
+  }
+  .BgImageDiv .logo {
+    display: block;
+    width: 25vw;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cardContainer {
+    position: absolute;
+    top: 130px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .grid__section {
+    width: 75vw;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .titleDiv {
+    width: 150vw;
+    position: absolute;
+    top: 15vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .brush {
+    width: 65vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .titles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #257bc4;
+    font-size: 2.5rem;
+    font-family: "Ubuntu", sans-serif;
+  }
+  .titles span {
+    position: relative;
+    left: 50px;
+  }
+  .left__right__images__div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -0.21875rem;
+  }
+  .leftImage,
+  .rightImage {
+    width: 6rem;
+    height: 770px;
   }
 }
